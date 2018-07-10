@@ -1,0 +1,13 @@
+var myName;//declared
+var
+const
+let
+myName = "test";//initialized
+console.log("the name is " + myName);
+Names can contain letters, digits, underscores, and dollar signs.
+Names must begin with a letter
+Names can also begin with $ and _
+Names are case sensitive (y and Y are different variables)
+Reserved words (like JavaScript keywords) cannot be used as names
+
+var class;//Uncaught SyntaxError: Unexpected token ;

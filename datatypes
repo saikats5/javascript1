@@ -1,0 +1,19 @@
+boolean
+null //null * 32 = 0
+undefined //variable not declared or declared but not yet assigned any value //undefined + 32 = NaN
+var num = 3.6;
+var bar = 6.4;
+console.log(num + bar);//10
+
+Symbol//only in ES6//create unique instances
+var sym1 = Symbol("foo");
+var sym2 = Symbol("foo");
+console.log(sym1 === sym2); //false
+console.log(String(sym1)); //Symbol(foo)
+
+Object
+var myCar = new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+
+console.log(myCar.make);//Ford
