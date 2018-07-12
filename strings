@@ -1,0 +1,21 @@
+s = "He said \"Hi!\"";
+s = "He said 'Hi!'"
+
+Code Output
+\' single quote
+\" double quote
+\\ backslash
+\n newline
+\r carriage return
+\t tab
+\b backspace
+\f form feed
+
+city = "New " + "Delhi";//New Delhi
+
+string values are immutable
+
+var abc = "Hello";
+abc[0] = "J";
+// it will not change the value as strings are immutable abc will be "Hello"
+new value can be assigned to string variable

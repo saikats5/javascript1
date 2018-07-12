@@ -1,0 +1,14 @@
++ - * / %
+operations can be done using decimals
+
+rounded off at certain limit
+
+n++
+n--
+n+=5// n = n + 5
+
+n=3
+console.log(n++);//3
+console.log(n);//4
+
+console.log(++n);//4
