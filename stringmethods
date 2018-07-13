@@ -1,0 +1,26 @@
+var abc = "Hello World";
+var def = "Testing";
+
+abc.charAt(1) //e
+abc.charCodeAt(1) //101
+abc.concat(def) // Hello WorldTesting
+abc.endsWith("World") //true
+abc.endsWith("to") //false
+String.fromCharCode(101) //e
+abc.includes("est") //true
+abc.indexOf("l") //2 it will always takes the first instance
+abc.lastIndexOf("l") //9
+abc.match(/l/g) //["l", "l", "l"]
+abc.repeat(3) //Hello WorldHello WorldHello World
+abc.replace(/ello/g, "ELLO") //HELLO World
+abc.search("llo") //2
+abc.slice(2, 4) //"ll"
+abc.split(" ") //["Hello", "World"]
+abc.startsWith("Hel") //true
+abc.substr(2, 4) //"llo "
+abc.substring(2, 4) //"ll"
+abc.toLowerCase() //"hello world"
+abc.toUpperCase() //"HELLO WORLD"
+
+var ghi = "   Hey    ";
+ghi.trim() // "Hey"
