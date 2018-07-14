@@ -1,0 +1,28 @@
+both variables and functions are hoisted
+
+function abc(){
+    return def;
+}
+abc() //Uncaught ReferenceError: def is not defined
+
+==============================================================
+
+function abc(){
+    return def;
+}
+abc() //Uncaught ReferenceError: def is not defined
+var def;
+
+ghi() //ReferenceError: ghi is not defined
+
+===========================================================
+
+ghi() //Uncaught ReferenceError: ghi is not defined
+
+=============================================================
+
+ghi() ///Uncaught ReferenceError: ghi is not a function
+var function ghi(){
+    return 'some string';
+}
+
