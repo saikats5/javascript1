@@ -1,0 +1,6 @@
+var abc = 10;
+if(abc = 11){
+    console.log("Some Text);
+}
+
+//It work as assignment returns true
