@@ -24,3 +24,131 @@ abc.toUpperCase() //"HELLO WORLD"
 
 var ghi = "   Hey    ";
 ghi.trim() // "Hey"
+
+===============================================================================
+
+Difference between slice, substring, substr
+
+var numbers = "0123456789";
+
+// String.slice( begin, end )
+// Let's start by using both begin and end.
+console.log(
+    "slice( 3, 7 ) :",
+    numbers.slice( 3, 7 )
+);
+//3456
+
+// What happens when we start with a negative number.
+console.log(
+    "slice( -7, 7 ) :",
+    numbers.slice( -7, 7 )
+);
+//3456
+
+// What happens when we use two negative numbers.
+console.log(
+    "slice( -7, -3 ) :",
+    numbers.slice( -7, -3 )
+);
+//3456
+
+// What happens when we omit the last argument.
+console.log(
+    "slice( 3 ) :",
+    numbers.slice( 3 )
+);
+//3456789
+
+// And with the negative, end-relevant index.
+console.log(
+    "slice( -7 ) :",
+    numbers.slice( -7 )
+);
+//3456789
+
+// If the index is out of range, it returns the empty string.
+console.log(
+    "slice( 100, 101 ) :",
+    numbers.slice( 100, 101 )
+);
+//
+
+// String.substring( from, to )
+// Let's start by using both begin and end.
+console.log(
+    "substring( 3, 7 ) :",
+    numbers.substring( 3, 7 )
+);
+//3456
+
+// What happens when we start with a negative number.
+console.log(
+    "substring( -7, 7 ) :",
+    numbers.substring( -7, 7 )
+);
+//0123456
+
+// What happens when we use two negative numbers.
+console.log(
+    "substring( -7, -3 ) :",
+    numbers.substring( -7, -3 )
+);
+//
+
+// What happens when we omit the last argument.
+console.log(
+    "substring( 3 ) :",
+    numbers.substring( 3 )
+);
+//3456789
+
+// And with the negative, end-relevant index.
+console.log(
+    "substring( -7 ) :",
+    numbers.substring( -7 )
+);
+//0123456789
+
+// If the index is out of range, it returns the empty string.
+console.log(
+    "substring( 100, 101 ) :",
+    numbers.substring( 100, 101 )
+);
+//
+
+// String.substr( start, length )
+// Let's start by using both start and length
+console.log(
+    "substr( 3, 4 ) :",
+    numbers.substr( 3, 4 )
+);
+//3456
+
+// What happens when we start with a negative number.
+console.log(
+    "substr( -7, 4 ) :",
+    numbers.substr( -7, 4 )
+);
+//3456
+
+// What happens when we omit the last argument.
+console.log(
+    "substr( 3 ) :",
+    numbers.substr( 3 )
+);
+//3456789
+
+// And with the negative, end-relevant index.
+console.log(
+    "substr( -7 ) :",
+    numbers.substr( -7 )
+);
+//3456789
+
+// If the index is out of range, it returns the empty string.
+console.log(
+    "substr( 100, 1 ) :",
+    numbers.substr( 100, 1 )
+);
+//
