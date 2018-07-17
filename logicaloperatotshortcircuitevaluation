@@ -1,0 +1,19 @@
+Short Circuit Evaluation
+var test = true;
+if(test){
+    isTrue();
+}
+(test && isTrue());
+
+var test = false;
+if(!test){
+    isFalse();
+}
+(test || isFalse());
+
+function test(name){
+    name = name || "Bar";
+    console.log("The result is " + name);
+}
+test(); //"The result is Bar"
+test("TestName"); //"The result is TestName"
