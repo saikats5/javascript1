@@ -1,0 +1,11 @@
+// == abstract equality
+// === strict equality
+
+3 == "3" //true
+3 === "3" // false
+
+true == "1" //true
+true === "1" //false
+
+"This is a string" == new String("This is a string") //true
+"This is a string" === new String("This is a string") //false
