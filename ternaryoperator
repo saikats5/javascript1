@@ -1,0 +1,8 @@
+Multiple operation in ternary operation
+
+var stop;
+test === "testString" ? (console.log('a'), stop = false) : (console.log('b'), stop = true);
+
+var firstcheck = false,
+    secondcheck = false,
+    access = firstcheck ? 'Access Denied' : secondcheck ? 'Access Denied' : 'Access Granted';
