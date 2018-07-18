@@ -1,0 +1,8 @@
+var city = ["Delhi", "kolkata", "Mumbai", "Bangalore"];
+
+Multi Dimensional Array
+var teams = [['abc', 1],['def', 2]];
+
+arrayList.forEach(function(element){
+    console.log(element);
+})
