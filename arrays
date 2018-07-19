@@ -6,3 +6,43 @@ var teams = [['abc', 1],['def', 2]];
 arrayList.forEach(function(element){
     console.log(element);
 })
+
+var arr = ['a', 'b', 'c'];
+var arr1 = ['q', 's'];
+
+arr.push('d'); //4
+arr //['a', 'b', 'c', 'd']
+
+arr.pop(); //'d'
+arr //['a', 'b', 'c']
+
+arr.concat(arr2); //['a', 'b', 'c', 'q', 's']
+arr //['a', 'b', 'c']
+arr1 //['q', 's'];
+
+arr.join(""); //"abc"
+arr //['a', 'b', 'c']
+
+arr.join("!"); //"a!b!c"
+arr //['a', 'b', 'c']
+
+arr.reverse(); //['c', 'b', 'a']
+arr //['c', 'b', 'a']
+
+arr.shift() //'c'
+arr //['b', 'a']
+
+
+arr.unshift('p') //3
+arr //['p', 'b', 'a']
+
+arr.slice(1, 2) //['b']
+arr //['p', 'b', 'a']
+
+arr.push('z');
+arr.push('m');
+arr.sort() //['a', 'b', 'm', 'p', 'z']
+arr //['a', 'b', 'm', 'p', 'z']
+
+arr.splice(2, 2, 'j'); //['m', 'p'] 1st -- start : 2nd -- number of items to be removed : 3rd -- items to be added
+arr //['a', 'b', 'j', 'z']
