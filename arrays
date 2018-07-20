@@ -46,3 +46,10 @@ arr //['a', 'b', 'm', 'p', 'z']
 
 arr.splice(2, 2, 'j'); //['m', 'p'] 1st -- start : 2nd -- number of items to be removed : 3rd -- items to be added
 arr //['a', 'b', 'j', 'z']
+
+var original = [1, 2, 3, 4, 5];
+//shallow copying
+var copy1 = original.slice(0);
+var copy2 = [...original];
+//deep copying
+
