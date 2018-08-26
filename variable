@@ -11,3 +11,15 @@ Names are case sensitive (y and Y are different variables)
 Reserved words (like JavaScript keywords) cannot be used as names
 
 var class;//Uncaught SyntaxError: Unexpected token ;
+
+5 + 5 //10
+5 + '5' //55
+'5' + 5 //55
+5 + + '5' //10
+'5' - - '5' //10
+NaN === NaN //false
+{} + [] === 0 //true
+[] + [] === 0 //true
+[] * 1 === 0 //true
+false + 1 === 1 //true
+typeof NaN === 'number' //true
