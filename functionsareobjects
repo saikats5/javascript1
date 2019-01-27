@@ -1,1 +1,18 @@
 function is special type of object with two hidden feature i.e., NAME(optional, can be anonymous) and code(can be invocable anytime)
+
+function greet(){
+    console.log("hi");
+}
+
+greet();
+
+greet.language = "english";
+
+on consoling the function, console.log(greet);
+it will show
+
+function greet(){
+    console.log("hi");
+}
+
+but greet.language can be accessible directly
