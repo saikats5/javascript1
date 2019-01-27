@@ -1,0 +1,1 @@
+function is special type of object with two hidden feature i.e., NAME(optional, can be anonymous) and code(can be invocable anytime)
