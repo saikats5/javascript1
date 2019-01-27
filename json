@@ -1,0 +1,10 @@
+var objectLiteral = {
+    name: "Saikat",
+    isDeveloper: true
+}
+
+CONVERT Object to String
+JSON.stringify(objectLiteral);
+
+CONVERT String to Object
+JSON.parse('{name: "Saikat",isDeveloper: true}');
