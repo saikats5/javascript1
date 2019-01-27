@@ -16,3 +16,9 @@ function greet(){
 }
 
 but greet.language can be accessible directly
+
+c = {greeting : 'Hi'}
+value of c changes as equal operator sets up new memory space(new address) exception in reberence by value
+c = {greeting : 'Hola'}
+
+function inside a function with this points to global object that is a loophole in javascript that's why we use var self = this; to overcome the issue
