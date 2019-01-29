@@ -1,0 +1,10 @@
+Immediately Invoked Functions Expressions(IIFEs)
+
+var greeting = function(name){
+    return "Hello" + name;
+}('saikat');
+
+console.log(greeting); //greeting()//Uncaught TypeError: string is not a function
+
+function(){}//function statement, syntax parser will throw error as it expect a name
+(function(){}())//expression as it is inside ()//classic IIFE example
