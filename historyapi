@@ -1,0 +1,44 @@
+history.push(data, title, url);
+
+//title is not supported by any major browser
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>pushState and popstate</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="boxes">
+            <div class="box" id="box-1">one</div>
+            <div class="box" id="box-2">two</div>
+            <div class="box" id="box-3">three</div>
+            <div class="box" id="box-4">four</div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+let boxes = Array.from(document.getElementsByClassName('box'));
+
+function selectBox (id) {
+    boxes.forEach(b => {
+        b.classList.toggle('selected', b.id === id);
+    });
+}
+
+boxes.forEach(b => {
+    let id = b.id;
+    b.addEventListener('click', e => {
+        history.pushState({id}, `Selected: ${id}`, `./selected=${id}`)
+        selectBox(id);
+    });
+});
+
+window.addEventListener('popstate', e => {
+    selectBox(e.state.id);
+});
+
+history.replaceState({id: null}, 'Default state', './');

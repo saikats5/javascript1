@@ -1,0 +1,12 @@
+javascript syntax parser read code character by character before execution and can add ; on behalf of you
+
+function getPerson(){
+    return;
+    {
+        firstname: 'Saikat'
+    }
+}
+
+getPerson(); //undefined
+
+auto insert semicolon as it doesn't find space and carriage return next to it, it's on the next line
