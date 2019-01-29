@@ -1,0 +1,4 @@
+function greet(firstname, lastname, language){
+    console.log(arguments); //["saikat", "saha"] // looks like an array but it's not array does'nt support all the features
+}
+greet('saikat', 'saha');
