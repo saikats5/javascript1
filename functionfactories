@@ -1,0 +1,15 @@
+function makeGreeting(language){
+    return function(firstname, lastname){
+        if(language === "en"){
+            console.log('Hello ' + firstname + ' ' + lastname);
+        }
+        if(language === "es"){
+            console.log('Hello ' + firstname + ' ' + lastname);
+        }
+    }
+}
+var greetEnglish = makeGreeting('en');
+var greetSpanish = makeGreeting('es');
+
+greetEnglish('Saikat', 'Saha');
+greetSpanish('Saikat', 'Saha');
