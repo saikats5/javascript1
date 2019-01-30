@@ -1,0 +1,35 @@
+all functions have access to call(), apply(), bind()
+
+var logName = function(){}.bind(abc); //doesn't eexcute immediately it creates a copy
+(function(){}).apply(abc, ['en', 'es']);
+
+call and apply works as () of function
+
+Function borrowing
+var person = {
+    firstname: 'saikat',
+    lastname: 'saha',
+    getFullname: function(){
+        console.log(this.firstname);
+    }
+}
+
+var person2 = {
+    firstname: 'saik',
+    lastname: 'saha'
+}
+
+person.getFullname.apply(person2)
+
+
+Function Currying
+it applies to bind and the 2nd parameter onwards will set permanent value for arguements
+
+function multiply(a, b){
+    return a*b;
+}
+function multiplyByTwo(b){
+    var a = 2;
+    return a*b;
+}
+var multiplyByTwo = multiply.bind(this, 2);
