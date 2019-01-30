@@ -1,0 +1,33 @@
+one access can access to the properties and methods of another object
+
+every object in js have a property called prototype i.e., proto {}
+
+Not for programming for understanding
+var person = {
+    firstname: 'Default',
+    lastname: 'Default',
+    getFullName: function(){
+        return this.firstname
+    }
+}
+
+var john = {
+    firstname: 'John',
+    lastname: 'Doe'
+}
+
+john.__proto__ = person;
+john.getFullname();
+
+Everything is an Object
+
+var a = {}; //a.__proto__ //Object{}
+var b = function(){}; //b.__proto__ //function Empty(){} //b.__proto__.--proto__ //Object{}
+car c = []; //c.__proto__ //[] //c.__proto__.--proto__ //Object{}
+
+Base Object doesn't have prototype
+
+for(var prop in John){} //firstname, lastname, getFullname
+john.hasOwnProperty(prop);
+
+new is an operator, creates a empty object
