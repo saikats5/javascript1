@@ -8,3 +8,5 @@ console.log(greeting); //greeting()//Uncaught TypeError: string is not a functio
 
 function(){}//function statement, syntax parser will throw error as it expect a name
 (function(){}())//expression as it is inside ()//classic IIFE example
+
+(function(){}()) or (function(){})() //both are same
