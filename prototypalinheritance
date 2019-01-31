@@ -31,3 +31,14 @@ for(var prop in John){} //firstname, lastname, getFullname
 john.hasOwnProperty(prop);
 
 new is an operator, creates a empty object
+var a = {}
+and then the Person() gets executed with new execution context with this pointing to the empty opject of type Person created by new operator
+
+function Person(){
+    console.log(this); //Person {}
+    this.firstname = 'John';
+    this.lastname = 'Doe';
+}
+
+var john = new Person();
+console.log(john); //Person{firstname: 'John', lastname: 'Doe'}
