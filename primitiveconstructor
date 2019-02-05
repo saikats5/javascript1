@@ -1,0 +1,12 @@
+var a = new Number(3);
+a //Number{[[PrimitiveValue]]: 3}
+
+var a = new String("john");
+
+"John".length
+new String("John").length
+
+String.prototype.isLengthGreaterThan = function(limit){
+    return this.length > limit;
+}
+"John".isLengthGreaterThan(3)

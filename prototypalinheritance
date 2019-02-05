@@ -40,5 +40,9 @@ function Person(){
     this.lastname = 'Doe';
 }
 
+Person.prototype.getFullName = function(){
+    return this.firstname;
+}
+
 var john = new Person();
 console.log(john); //Person{firstname: 'John', lastname: 'Doe'}
