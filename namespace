@@ -1,0 +1,7 @@
+var greet = 'Hello';
+var greet = 'Hola';
+
+var english = {};
+var spanish = {};
+
+english.greetings.greet = 'Hello'; //error as . operator works from left to right and english.greetings is undefined

@@ -1,0 +1,23 @@
+. is an operator // left to right
+
+var person = new Object();
+person.name = 'saikat';
+person.['firstname'] = 'saikat';
+person.[lastname] //variable
+
+function greet(person){
+    console.log('Hi ' + person.firstname);
+}
+
+greet({firstname: 'saikat', lastname: 'saha'})
+
+
+functions are objects
+
+greet.language = 'english';
+
+anonymousGreet(); //Uncaught Typeerror: undefined is not a function
+
+var anonymousGreet = function(){
+    console.log('hi');
+}
