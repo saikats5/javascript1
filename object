@@ -21,3 +21,5 @@ anonymousGreet(); //Uncaught Typeerror: undefined is not a function
 var anonymousGreet = function(){
     console.log('hi');
 }
+
+every execution context has its own 'this' property which points to window object
