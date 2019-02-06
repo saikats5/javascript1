@@ -1,4 +1,15 @@
+arguments holds all the values that you pass to the function
+
 function greet(firstname, lastname, language){
+    language = language || 'en'; //default value
     console.log(arguments); //["saikat", "saha"] // looks like an array but it's not array does'nt support all the features
+    console.log(arguments); //['saikat', 'saha'] // list only the paramters that are passed
 }
 greet('saikat', 'saha');
+
+arguments will get deprecated and rest will take its place
+
+Note: If you're writing ES6 compatible code, then rest parameters should be preferred.
+Note: “Array-like” means that arguments has a length property and properties indexed from zero, but it doesn't have Array's built-in methods like forEach and map. 
+console.log(typeof arguments); // 'object'
+console.log(typeof arguments[0]); // returns the type of the first argument

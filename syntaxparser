@@ -9,4 +9,4 @@ function getPerson(){
 
 getPerson(); //undefined
 
-auto insert semicolon as it doesn't find space and carriage return next to it, it's on the next line
+auto insert semicolon as it doesn't find space and find a carriage return next to it, it's on the next line

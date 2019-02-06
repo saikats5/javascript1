@@ -1,5 +1,10 @@
 var city = ["Delhi", "kolkata", "Mumbai", "Bangalore"];
 
+var city = new Array();
+
+var arr = [1, 'saikat', {name: 'john'}, function(name){console.log(name)}];
+arr[3](arr[2].name)
+
 Multi Dimensional Array
 var teams = [['abc', 1],['def', 2]];
 
@@ -31,7 +36,6 @@ arr //['c', 'b', 'a']
 
 arr.shift() //'c'
 arr //['b', 'a']
-
 
 arr.unshift('p') //3
 arr //['p', 'b', 'a']

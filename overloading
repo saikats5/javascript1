@@ -1,0 +1,11 @@
+functions having same name with different number of parameters
+
+it doesn't work in javascript
+
+function greetEnglish(firstname, lastname){
+    greet(firstname, lastname, 'en');
+}
+
+function greetSpanish(firstname, lastname){
+    greet(firstname, lastname, 'es');
+}
