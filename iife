@@ -1,6 +1,6 @@
 Immediately Invoked Functions Expressions(IIFEs)
 
-var greeting = function(name){
+var greeting = function(name){ // function object adding () invokes the function immediately
     return "Hello" + name;
 }('saikat');
 
@@ -10,3 +10,11 @@ function(){}//function statement, syntax parser will throw error as it expect a 
 (function(){}())//expression as it is inside ()//classic IIFE example
 
 (function(){}()) or (function(){})() //both are same
+
+3; //expression
+"I am a string" //expression
+
+{name: 'john'} //expression
+
+function(){} //statement
+(function(){}) //expression ()//operator
