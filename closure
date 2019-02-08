@@ -40,7 +40,7 @@ function abc(){
     var arr = [];
     for(var i = 0; i<3; i++){
         arr.push(
-            (function(j){
+            (function(j){ //IIFE
                 return function(){
                     console.log(j);
                 }
