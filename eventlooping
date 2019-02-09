@@ -9,4 +9,30 @@ function sayHiLater(){
 
 sayHiLater();
 
-function stack calls webapi and then webpai put the function in event queue which is then send to function stack when it is empty
+heap -- memory allocation
+stack -- execution context - function
+
+function foo(){
+    throw new Error('Oops');
+}
+function bar(){
+    foo();
+}
+function baz(){
+    bar();
+}
+baz();
+
+Uncaught Error: Oops
+foo
+bar
+baz
+(anonymous function)
+
+RangeError: Maximum call stack size exceeded
+
+stack sends webapi to webapi in browser and pops up of the stack while webapi finishes the functionality and send the call back to task queue and then event loop vheck if the stack is empty, if it is empty then it will send the call back from task queue to the stack one after the other
+
+
+
+https://www.youtube.com/watch?v=6MXRNXXgP_0&t=314s
