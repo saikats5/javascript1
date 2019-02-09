@@ -1,3 +1,5 @@
+Single thresded application
+
 function sayHiLater(){
     var greeting = 'Hi';
     setTimeout(function(){
@@ -6,3 +8,5 @@ function sayHiLater(){
 }
 
 sayHiLater();
+
+function stack calls webapi and then webpai put the function in event queue which is then send to function stack when it is empty
