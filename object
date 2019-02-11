@@ -42,3 +42,33 @@ c = {
         //console.log(self);
     }
 }
+
+let toyota = {
+	drive(){
+		return 'driving toyota';
+	},
+	break(){
+		return 'breaking toyota';
+	}
+}
+
+let camry = {
+	wifi(){
+		return 'using wifi';
+	}
+}
+
+Object.assign(camry, toyota);
+//camry{drive(),break,wifi}
+if same functions are inserted suppose drive(), then it will take the copied one i.e., 'driving toyota'
+let newToyotaCopy = Object.assign({},toyota); //it is shallow copy i.e., only local property copy not prototype property copy
+Object.assign(toyota, wifi(){return 'using wifi', color: 'red'}) //toyota{drive(), break(), wifi(), color}
+
+let c1 = function(x,y,z){
+	this.x = x;
+	this.y = y;
+	this.z = z;
+}
+let c1 = function(x,y,z){
+	Object.assign(this, {x,y,z});
+}
