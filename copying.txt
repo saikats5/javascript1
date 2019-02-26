@@ -1,0 +1,31 @@
+let shallowArr = [123, 'bob', true, null, undefined];
+let deepObj = {
+				'characters': ['Wanda', 'Davis', 'Emma'],
+				'places': ['Bangalore', 'Kolkata'],
+				'testing': true,
+				'seasons': 6
+			}
+
+let arr = shallowArr;
+shallowArr[0] = 456;
+//arr -- [456, 'bob', true, null, undefined]
+//shallowArr -- [456, 'bob', true, null, undefined]
+
+//shallow copy
+let arr = Array.from(shallowArr);
+let arr = [...shallowArr];
+let arr = [].concat(shallowArr);
+let arr = shallowArr.slice(0);
+let obj = Object.create({}, shallowObj);
+let obj = Object.assign({}, shallowObj);
+let newObj = {...deepObj};
+newObj.places[0] = 'Mumbai'; //it will changed to ['Mumbai', 'Kolkata'] for both
+newObj.places = ['New Delhi', Kolkata]; new reference created for newObj, changed for newObj only
+
+//deep copy
+let newObj = deepObj;
+let newObj = JSON.parse(JSON.stringify(deepObj));
+using service workers postMessage() onmessage
+history api history.pushState(obj, title)   history.state
+notification API new Notification('title', {data: obj}).data
+build a custom recursive function
