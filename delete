@@ -1,0 +1,31 @@
+remove property from an object
+cannot delete a variable
+
+var obj = {
+    prop: 'test',
+    prop2: 'test2'
+}
+
+obj.prop; // 'test'
+'prop' in obj; // true
+obj.hasOwnProperty('prop'); // true
+
+delete obj.prop; // true
+obj.prop // undefined
+'prop' in obj; // false
+obj.hasOwnProperty('prop'); // false
+
+obj.prop2 = null; // null
+obj.prop2 // null
+'prop2' in obj; // true
+obj.hasOwnProperty('prop2'); // true
+
+var arr = [1,2,3];
+arr.length; // 3
+delete arr[1]; // true
+arr[1]; // undefined
+arr.length; // 3
+use splice to delete from array
+it can be used on array but it will create a sparse array
+
+//delete variable works on console but actuallt it doesn't

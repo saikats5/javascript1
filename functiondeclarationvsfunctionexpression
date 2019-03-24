@@ -1,0 +1,28 @@
+function abc(){}
+var def = function(){} // var def = function def(){} // var def = function ghi(){}
+
+console.log(doSomething); // function doSomething(){console.log("Declare Something");}
+doSomething(); // Declare Something
+
+function doSomething(){
+    console.log("Declare Something");
+}
+
+console.log(something); // undefined
+something(); // Uncaught TypeError: something is not a function
+
+var something = function(){
+    console.log("Express Something");
+}
+
+
+
+var runIt = function(a){
+    console.log(a); // function (){var b = " Now"; console.log("Running" + b);}
+    a(); // Running Now
+};
+runIt(function(){
+    var b = " Now";
+    console.log("Running" + b);
+});
+

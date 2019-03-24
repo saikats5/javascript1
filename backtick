@@ -1,0 +1,12 @@
+let name = "Max";
+
+let multi = `
+Hello
+World
+${name}`;
+
+console.log(multi);
+
+Hello
+World
+Max

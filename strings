@@ -19,3 +19,9 @@ var abc = "Hello";
 abc[0] = "J";
 // it will not change the value as strings are immutable abc will be "Hello"
 new value can be assigned to string variable
+
+
+String.split(delimeter, linit);
+delimeter: caharacter or characters on which the string splits, it can also be regular expression
+limit: max length of the array
+Arr.join("-");

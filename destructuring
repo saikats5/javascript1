@@ -1,0 +1,20 @@
+const obj = {first: 'Max', last: 'Doe', age: 40}
+
+const {first: f, last: l} = obj;
+console.log(f);
+console.log(l);
+
+const {first, last} = obj;
+console.log(first);
+console.log(last);
+
+const arr = ['a', 'b'];
+const [x, y] = arr;
+console.log(x);
+console.log(y);
+
+function f({x}){
+//function f({x=0}){ // default value --> 0 
+    console.log(x);
+}
+f({x:1,y:1,z:3});

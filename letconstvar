@@ -1,0 +1,9 @@
+var gets hoisted, while let and const doesnt
+let and const follow block level scoping
+
+const needs to be defined otherwise it will throw errorn // Uncaught SyntaxError: Missing initializer in const declaration
+// Assignement is not allowed for const
+const pointing to primitive value or object is immutable but if a object property is changed that doesn't effect
+
+const foo = Object.freeze({}); // unable to change object property // not throw any error just ignore it
+foo['prop'] = "Moo"; // no error // doesn't work // 'use strict' will throw error 
