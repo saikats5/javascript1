@@ -1,0 +1,65 @@
+map is data structure in ES6 and it overcomes all drawbacks in onject
+let map = new Map();
+map.set('A',1);
+map.set('B',2);
+map.set('C',3);
+
+let map = new Map()
+.set('A',1)
+.set('B',2)
+.set('C',3);
+
+let map = new Map([
+    ["A",1],
+    ["B",2],
+    ["C",3]
+])
+
+map.get("A"); // 1
+map.has("D"); // false
+map.delete("A"); // true
+map.size; // 3
+map.clear(map.clear());
+
+for(let key of map.keys()){
+    console.log(key); // A B C
+}
+for(let value of map.values()){
+    console.log(value); // 1 2 3
+}
+
+for(let entry of map.entries()){
+    console.log(entry[0], entry[1]); // A 1  B 2  C 3
+}
+
+for(let [key, value] of map.entries()){
+    console.log(key, value); // A 1  B 2  C 3
+}
+
+for(let [key, value] of map){
+    console.log(key, value); // A 1  B 2  C 3
+}
+
+difference between map and object, map records the order the lements are inserted
+
+set only stores key
+let set = new Set();
+set.add("A");
+set.add("B");
+set.add("C");
+
+let set = new Set()
+.add("A")
+.add("B")
+.add("C");
+
+let set = new Set(["A", "B", "C"]);
+set.has("B"); // true
+set.delete("A"); // true
+set.size; // 3
+set.clear();
+set.add("A"); // ignores it as set should be unique and thus size is 3
+
+for(let entry of set){
+    console.log(entry);
+}

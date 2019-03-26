@@ -82,3 +82,15 @@ obj.hasOwnProperty(prop)
 
 let base = {a:1, b:2}
 let obj = Object.create(base); // it creates a new object whose prototype points to base object, that means obj's prototype will be base
+
+let obj = {'hasOwnProperty': 1};
+for(prop in obj){
+    if(obj.hasOwnProperty(prop)){} // throws error // obj.hasOwnProperty is not a function
+}
+
+let obj = {'__proto__': 1, b: 2};
+for(prop in obj){
+    if(obj.hasOwnProperty(prop)){} // \console.log(prop); // b
+}
+
+__proto__ is a keyword
