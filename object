@@ -72,3 +72,13 @@ let c1 = function(x,y,z){
 let c1 = function(x,y,z){
 	Object.assign(this, {x,y,z});
 }
+
+let base = {a:1, b:2}
+let obj = Object.create(base);
+obj['c'] = 3;
+
+for(prop in obj) // show even the inherited properties
+obj.hasOwnProperty(prop)
+
+let base = {a:1, b:2}
+let obj = Object.create(base); // it creates a new object whose prototype points to base object, that means obj's prototype will be base
