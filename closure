@@ -1,5 +1,7 @@
 in closure even if the execution context of function expression pops out the variable associated inside it stays in the memory no garbage collection happens as the function inside can reference to it
 
+closure always holds the current value of the reference
+
 function abc(){
     var arr = [];
     for(var i = 0; i<3; i++){
