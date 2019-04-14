@@ -22,3 +22,8 @@ value of c changes as equal operator sets up new memory space(new address) excep
 c = {greeting : 'Hola'}
 
 function inside a function with this points to global object that is a loophole in javascript that's why we use var self = this; to overcome the issue
+
+function abc(){}
+abc.moo = 1;
+
+abc() == abc.call() // to stabilize the value of 'this'
