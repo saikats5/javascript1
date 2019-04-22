@@ -42,3 +42,38 @@ function a(b,c,d){
 }
 a.call(1,2,3,4); // 1 2 3 4
 a.call(1,[2,3,4]); // 1 2 3 4
+
+a.name // a
+a.lehgth // no of arguments
+function is an object so we can add properties
+a.moo = 1;
+a.toString() // complete function
+
+call,apply,bind is used to stabilize the value of 'this'
+
+a.call() === a()
+
+"use strict";
+function a(){
+	console.log(this); // undefined in strict mode // Object {} with call
+}
+a.call({});
+a.call(1); // value of this is 1
+
+var a = {
+	checkThis: function(){
+		function checkOther(){
+			console.log(this);
+		}
+		checkOther.call(this);
+	}
+}
+
+a.checkThis() // a{}
+a.checkThis.call(a) // a{}
+a.checkThis.call() // window
+a.checkThis.call() // undefined in 'use strict'
+
+
+
+

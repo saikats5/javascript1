@@ -1,0 +1,39 @@
+document.readyState --> Get the loading status of the current document, This property is read-only,
+uninitialized - Has not started loading yet
+loading - Is loading
+loaded - Has been loaded
+interactive - Has loaded enough and the user can interact with it
+complete - Fully loaded
+
+document.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World";
+});
+document.removeEventListener("mousemove", myFunction);
+document.addEventListener(event, function, useCapture);
+
+if (document.addEventListener) {                // For all major browsers, except IE 8 and earlier
+  document.addEventListener("click", myFunction);
+} else if (document.attachEvent) {              // For IE 8 and earlier versions
+  document.attachEvent("onclick", myFunction);
+}
+
+The lifecycle of an HTML page has three important events:
+
+DOMContentLoaded – the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures <img> and stylesheets may be not yet loaded.
+load – the browser loaded all resources (images, styles etc).
+beforeunload/unload – when the user is leaving the page.
+Each event may be useful:
+
+DOMContentLoaded event – DOM is ready, so the handler can lookup DOM nodes, initialize the interface.
+load event – additional resources are loaded, we can get image sizes (if not specified in HTML/CSS) etc.
+beforeunload event – the user is leaving: we can check if the user saved the changes and ask them whether they really want to leave.
+unload – the user almost left, but we still can initiate some operations, such as sending out statistics.
+
+window only fires the readystatechange event in IE and Edge (tested in IE 11). It does NOT fire in Firefox or Chrome.
+
+It is actually fired by the document, when its readyState changes to "interactive" and "complete" (bubbling).
+
+Thus, in IE:
+
+window.onreadystatechange == document.onreadystatechange
+I would not recommend using it though, as this event is not fired in the other browsers.
