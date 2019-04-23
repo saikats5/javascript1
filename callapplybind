@@ -41,7 +41,7 @@ function a(b,c,d){
 	console.log(d);
 }
 a.call(1,2,3,4); // 1 2 3 4
-a.call(1,[2,3,4]); // 1 2 3 4
+a.apply(1,[2,3,4]); // 1 2 3 4
 
 a.name // a
 a.lehgth // no of arguments
@@ -74,6 +74,33 @@ a.checkThis.call(a) // a{}
 a.checkThis.call() // window
 a.checkThis.call() // undefined in 'use strict'
 
+function sum() {
+	var total = 0;
+	for(var i = 0; i < arguements.length; i++){
+		total += arguments[i];
+	}
+	return total;
+}
+var things = [1,2,3,4,5,6,7,8,9];
+var x = sum.apply(null, things);
 
-
+.bind() associated with the function during definition not during call
+ var a = function(){
+	console.log(this);
+ }.bind(1);
+ a(); // 1
+ var abc = {
+	func: a
+ }
+ abc.a() // 1
+ bind only works with function expression not function abc(){}
+ 
+ var a = {
+	checkThis: function(){
+		var checkOther = function(){
+			console.log(this);
+		}.bind(this);
+		checkOther();
+	}
+}
 
