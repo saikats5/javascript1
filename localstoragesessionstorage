@@ -1,0 +1,11 @@
+window.sessionStorage
+setItem(key, value) - it allows to add a key/value pair to the storage object.if the key already exists, the name value will overwrite the old value
+getItem(key) - it returns the value of the item that is set with the given key
+key(n) - it returns the key of the item in the storage object at the nth index which can be useful for looping
+removeItem(key) - it removes the item in the storage object with the given key
+
+session storage is specific to domain
+//on reload the data stays, on closing the page it goes off
+session storage length is available
+sessionStorage.key(1)
+sessionStorage.clear()
